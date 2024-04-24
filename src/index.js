@@ -1,4 +1,4 @@
-import { greetUser } from '$utils/greet';
+
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import { FirstPersonControls } from 'three/addons/controls/FirstPersonControls.js';
@@ -63,8 +63,9 @@ function init3D() {
   {
       vec4 modelPosition = modelMatrix * vec4(position, 1.0);
       modelPosition.y += sin(uTime + modelPosition.x * 100.0 ) * aScale * 0.09;
-       modelPosition.x += sin(uTime + modelPosition.z * 50.0 ) * aScale * 0.05;
-      vec4 viewPosition = viewMatrix * modelPosition;
+      modelPosition.x += sin(uTime + modelPosition.z * 50.0 ) * aScale * 0.05;
+      
+       vec4 viewPosition = viewMatrix * modelPosition;
       vec4 projectionPosition = projectionMatrix * viewPosition;
     
       gl_Position = projectionPosition;
@@ -74,7 +75,7 @@ function init3D() {
   }
 `;
 
-    // Vertex Shader Inline code
+
     const firefliesFragmentShader = `
   void main()
   {
@@ -98,11 +99,9 @@ void main()
     gl_Position = projectionPosition;
     vUv = uv;
 }
-
-
 `;
 
-    // Vertex Shader Inline code
+
     const portalFragmentShader = `
 varying vec2 vUv;
 
