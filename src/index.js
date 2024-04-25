@@ -1,18 +1,20 @@
 
+import * as THREE from 'three'
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
+import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader.js'
 
-// import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
-
-// import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
-// import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader.js'
 
 window.Webflow ||= [];
 window.Webflow.push(() => {
   init3D();
 });
 
-const DRACOLoader = new THREE.DRACOLoader()
-const GLTFLoader = new THREE.GLTFLoader()
+
 function init3D() {
+  // Ensure Three.js and its loaders are loaded before initializing 3D
+
+
 
   const containers = document.querySelectorAll('[data-3d="c"]');
 
@@ -43,12 +45,12 @@ function init3D() {
     const textureLoader = new THREE.TextureLoader()
 
     // Draco loader
-    const dracoLoader = new dracoLoader()
-    DRACOLoader.setDecoderPath('draco/')
+    // const dracoLoader = new THREE.DRACOLoader()
+    // dracoLoader.setDecoderPath('draco/')
 
     // GLTF loader
-    const gltfLoader = new gltfLoader()
-    GLTFLoader.setDRACOLoader(dracoLoader)
+    const gltfLoader = new GLTFLoader()
+    // gltfLoader.setDRACOLoader(dracoLoader)
 
 
     // Fragment Shader Inline code
