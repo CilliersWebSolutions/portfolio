@@ -17,8 +17,8 @@
     "url": "https://github.com/finsweet/developer-starter/issues"
   },
   "type": "module",
-  "main": "src/index.ts",
-  "module": "src/index.ts",
+  "main": "src/index.js",
+  "module": "src/index.js",
   "files": [
     "dist"
   ],
@@ -39,18 +39,18 @@
     "@changesets/cli": "^2.27.1",
     "@finsweet/eslint-config": "^2.0.7",
     "@finsweet/tsconfig": "^1.3.4",
-    "@playwright/test": "^1.43.1",
+    "@playwright/test": "^1.42.1",
     "@types/three": "^0.163.0",
-    "@typescript-eslint/eslint-plugin": "^7.7.1",
-    "@typescript-eslint/parser": "^7.7.1",
+    "@typescript-eslint/eslint-plugin": "^7.1.1",
+    "@typescript-eslint/parser": "^7.1.1",
     "cross-env": "^7.0.3",
-    "esbuild": "^0.20.2",
-    "eslint": "^9.1.1",
+    "esbuild": "^0.20.1",
+    "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.1.3",
-    "eslint-plugin-simple-import-sort": "^12.1.0",
+    "eslint-plugin-simple-import-sort": "^12.0.0",
     "prettier": "^3.2.5",
-    "typescript": "^5.4.5"
+    "typescript": "^5.3.3"
   },
   "dependencies": {
     "@finsweet/ts-utils": "^0.40.0",
